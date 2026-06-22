@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://googleform-project.onrender.com'
+  baseURL: 'https://googleform-project.onrender.com/api'
 });
 
 API.interceptors.request.use((req) => {
