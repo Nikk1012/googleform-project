@@ -17,7 +17,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === 'saveToBackend') {
     const { result, token } = request;
 
-    fetch('http://localhost:5000/api/results', {
+    fetch('https://googleform-project.onrender.com/api/results', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

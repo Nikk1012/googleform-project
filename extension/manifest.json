@@ -8,8 +8,8 @@
     "activeTab"
   ],
   "host_permissions": [
-    "https://docs.google.com/*",
-    "http://localhost:5000/*"
+  "https://docs.google.com/*",
+  "https://googleform-project.onrender.com/*"
   ],
   "background": {
     "service_worker": "background/service-worker.js"
