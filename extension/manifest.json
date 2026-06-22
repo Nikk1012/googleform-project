@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "GformA",
+  "version": "1.0.0",
+  "description": "Negative marking calculator for Google Forms quizzes. Built for CDS, UPSC, AFCAT, SSC, NEET aspirants.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://docs.google.com/*",
+    "http://localhost:5000/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://docs.google.com/forms/*"],
+      "js": ["content/extractor.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_title": "GformA"
+  }
+}

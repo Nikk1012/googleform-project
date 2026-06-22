@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GformA</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>GformA</h1>
+      <span class="version">v1.0</span>
+    </div>
+
+    <div id="not-detected" class="state-card warning">
+      <p>⚠️ No Google Forms result detected</p>
+      <p class="hint">Open a Google Forms quiz result page first</p>
+    </div>
+
+    <div id="detected" class="hidden">
+      <div class="state-card success">✅ Google Forms result detected</div>
+
+      <div class="score-grid">
+        <div class="score-item">
+          <span class="label">Total</span>
+          <span class="value" id="total">-</span>
+        </div>
+        <div class="score-item">
+          <span class="label">Correct</span>
+          <span class="value green" id="correct">-</span>
+        </div>
+        <div class="score-item">
+          <span class="label">Wrong</span>
+          <span class="value red" id="wrong">-</span>
+        </div>
+        <div class="score-item">
+          <span class="label">Skipped</span>
+          <span class="value gray" id="unattempted">-</span>
+        </div>
+      </div>
+
+      <div class="scheme-section">
+        <label>Exam Scheme</label>
+        <select id="scheme">
+          <option value="CDS">CDS</option>
+          <option value="UPSC Prelims">UPSC Prelims</option>
+          <option value="AFCAT">AFCAT</option>
+          <option value="SSC CGL">SSC CGL</option>
+          <option value="NEET">NEET</option>
+          <option value="Custom">Custom</option>
+        </select>
+      </div>
+
+      <div id="custom-section" class="hidden custom-section">
+        <input type="number" id="custom-correct" placeholder="Marks per correct" step="0.01"/>
+        <input type="number" id="custom-wrong" placeholder="Penalty per wrong" step="0.01"/>
+      </div>
+
+      <div class="results-section">
+        <div class="result-row">
+          <span>Raw Score</span>
+          <span id="raw-score">-</span>
+        </div>
+        <div class="result-row">
+          <span>Penalty</span>
+          <span id="penalty" class="red">-</span>
+        </div>
+        <div class="result-row highlight">
+          <span>Final Score</span>
+          <span id="final-score">-</span>
+        </div>
+        <div class="result-row">
+          <span>Accuracy</span>
+          <span id="accuracy" class="green">-</span>
+        </div>
+        <div class="result-row">
+          <span>Attempt Rate</span>
+          <span id="attempt-rate">-</span>
+        </div>
+      </div>
+
+      <button id="save-btn" class="save-btn hidden">Save to Dashboard</button>
+      <p id="save-status" class="save-status"></p>
+
+      <div class="token-section">
+        <input type="text" id="token-input" placeholder="Paste your token from Settings page"/>
+        <button id="token-save">Connect</button>
+      </div>
+    </div>
+
+    <div class="history-section">
+      <h3>Recent</h3>
+      <div id="history-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
