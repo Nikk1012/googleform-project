@@ -6,12 +6,14 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import History from './pages/History';
 import Settings from './pages/Settings';
+import Landing from './pages/Landing';
 
 const App = () => {
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={
@@ -23,7 +25,7 @@ const App = () => {
           <Route path="/settings" element={
             <ProtectedRoute><Settings /></ProtectedRoute>
           } />
-          <Route path="*" element={<Navigate to="/login" />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
