@@ -84,7 +84,7 @@ const Landing = () => {
         </p>
         <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
           <a
-            href="https://github.com/Nikk1012/googleform-project/releases/download/v1.0/GformA-extension.zip"
+            href="https://github.com/Nikk1012/googleform-project/releases/download/v1.0/GformAextension.zip"
             style={{ background: '#6366f1', color: '#fff', textDecoration: 'none', borderRadius: '10px', padding: '14px 32px', fontWeight: 700, fontSize: '16px', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
           >
             ⬇ Download Extension
@@ -145,7 +145,7 @@ const Landing = () => {
         <h2 style={{ fontSize: '32px', fontWeight: 800, color: '#fff', marginBottom: '16px' }}>Ready to get started?</h2>
         <p style={{ color: '#64748b', marginBottom: '36px', fontSize: '16px' }}>Download the extension and start tracking your scores today.</p>
         <a
-          href="https://github.com/Nikk1012/googleform-project/releases/download/v1.0/GformA-extension.zip"
+          href="https://github.com/Nikk1012/googleform-project/releases/download/v1.0/GformAextension.zip"
           style={{ background: '#6366f1', color: '#fff', textDecoration: 'none', borderRadius: '10px', padding: '14px 36px', fontWeight: 700, fontSize: '16px' }}
         >
           ⬇ Download GformA
